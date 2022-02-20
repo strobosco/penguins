@@ -3,7 +3,9 @@ import { Helmet } from "react-helmet";
 
 import "../styles/style.scss";
 
-import Posts from "../components/posts";
+import { fetchPosts } from "../utils/fetchPosts";
+
+import Grid from "../components/grid";
 
 const IndexPage = () => {
   return (
@@ -14,7 +16,8 @@ const IndexPage = () => {
       <div className="title">
         <h1>Poppin' Penguins</h1>
       </div>
-      <Posts />
+      <button onClick={fetchPosts}> test </button>
+      <Grid />
     </>
   );
 };
